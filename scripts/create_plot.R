@@ -16,6 +16,9 @@ connectivity_plot <- data_source %>% ggplot(
     y = "beacon nodes"
   ) +
   scale_fill_gradientn(
+    guide = "legend",
+    breaks = c(1.0, 0.5, 0),
+    labels = c("TRUE", "NOT TESTED", "FALSE"),
     colours = c(
       "red",
       "white",
@@ -28,7 +31,6 @@ connectivity_plot <- data_source %>% ggplot(
     )
   ) +
   theme(
-    legend.position = "none",
     axis.text = element_text(size = 18),
     axis.title = element_text(size = 18, face = "bold")
   )
