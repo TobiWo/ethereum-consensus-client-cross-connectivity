@@ -6,6 +6,20 @@ Overview of Ethereum CL client cross connectivitiy.
 
 ![Connectivity plot](./misc/connectivity.png)
 
+### Notes
+
+#### Nimbus
+
+Nimbus will support a separate validator client from version 22.7.0 onwards. This will be a beta release so you should not use it immediately after release. However, I will test the client with all other beacon clients of course.
+
+#### Lodestar
+
+I have lodestar instances running and will add the missing data soon.
+
+#### Prysm
+
+I didn't test prysm yet but I think because they use gRPC endpoints and no REST Api it is not possible to connect any other validator client to the prysm beacon client. But maybe I'm wrong here. Feel free to add data to the prysm validator-beacon client combinations as described below.
+
 ## Code
 
 The code to create the connectivity matrix plot is written in `R`, a statistical computing language.
