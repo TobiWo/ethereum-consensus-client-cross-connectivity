@@ -8,17 +8,15 @@ Overview of Ethereum CL client cross connectivitiy.
 
 ### Notes
 
-#### Nimbus
+#### General
 
-Nimbus will support a separate validator client from version 22.7.0 onwards. This will be a beta release so you should not use it immediately after release. However, I will test the client with all other beacon clients of course.
+All client combinations which have a green rectangle will work together which means the validator will send attestations and propose blocks successfully. However, some client combinations still create some `warnings` or `errors` which I will clarify with the client teams.
 
-#### Lodestar
-
-I have lodestar instances running and will add the missing data soon.
+Furthermore I will, of course, also reach out to the client teams if a specific validator does not work with a specific beacon node (see plot).
 
 #### Prysm
 
-I didn't test prysm yet but I think because they use gRPC endpoints and no REST Api it is not possible to connect any other validator client to the prysm beacon client. But maybe I'm wrong here. Feel free to add data to the prysm validator-beacon client combinations as described below.
+I didn't test prysm yet. This data will be added soon (hopefully).
 
 ## Code
 
