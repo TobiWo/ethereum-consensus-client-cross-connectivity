@@ -4,6 +4,9 @@ Overview of Ethereum CL client cross connectivitiy.
 
 ## Cross connectivity plot
 
+<!-- markdownlint-disable-next-line MD036 -->
+**CURRENTLY ONLY TESTED ON GOERLI/PRATER**
+
 ![Connectivity plot](./misc/connectivity.png)
 
 ### Notes
@@ -17,6 +20,21 @@ Furthermore I will, of course, also reach out to the client teams if a specific 
 #### Prysm
 
 I didn't test prysm yet. This data will be added soon (hopefully).
+
+#### Vouch
+
+Vouch is a validator client only, which is why the bn row of vouch is fully red. I will improve the code so the bn row of vouch will not be displayed at all.
+
+## Repositories
+
+This section includes all client repositories for further information:
+
+* [lighthouse](https://github.com/sigp/lighthouse)
+* [teku](https://github.com/ConsenSys/teku)
+* [nimbus](https://github.com/status-im/nimbus-eth2)
+* [lodestar](https://github.com/ChainSafe/lodestar)
+* [vouch](https://github.com/attestantio/vouch)
+* [prysm](https://github.com/prysmaticlabs/prysm)
 
 ## Code
 
@@ -50,4 +68,14 @@ You can run the script in two ways:
 1. From RStudio
   
     * open `main.R` in RStudio
-    * Click 'Source' in RStudio![source](./misc/rstudio-source.png)  
+    * Click 'Source' in RStudio![source](./misc/rstudio-source.png)
+
+## ToDo
+
+1. Increase legend and axis titles
+1. Add yellow as separate color
+   * validator works on bn but produces errors or warnings
+1. Improve code so that `vouch` does not get a separate bn row
+1. Create two matrix plots
+   * one for Goerli/Prater
+   * one for mainnet
