@@ -1,15 +1,26 @@
 # Legend
-# TRUE  == validator client works with respective beacon client
-# FALSE == validator client does not work with respective beacon client
-# NA    == not checked yet
+# TRUE    == validator client works with respective beacon client
+# FALSE   == validator client does not work with respective beacon client
+# NA      == not checked yet
+# "WARNING" == validator client works with respective beacon client but produces at least some error or warning logs
 
 # CL clients in format <client name>_<release or tag>
-clients <- c("lighthouse_v2.5.0", "teku_v22.7.0", "nimbus_v22.7.0", "prysm_v2.1.4-rc.0", "lodestar_v0.41.0", "vouch_v1.5.0")
+clients <- c(
+  "lighthouse_v2.5.1",
+  "teku_v22.8.0",
+  "nimbus_v22.7.0",
+  "prysm_v2.1.4-rc.0",
+  "lodestar_v0.41.0",
+  "vouch_v1.5.0"
+)
+
+# Warning log variable
+WARNING <- "WARNING"
 
 client_combinations <- c(
   "lighthouse_lighthouse",
   "lighthouse_teku",
-  "lighthouse_nimbus", 
+  "lighthouse_nimbus",
   "lighthouse_prysm",
   "lighthouse_lodestar",
   "lighthouse_vouch",
@@ -36,13 +47,7 @@ client_combinations <- c(
   "lodestar_nimbus",
   "lodestar_prysm",
   "lodestar_lodestar",
-  "lodestar_vouch",
-  "vouch_lighthouse",
-  "vouch_teku",
-  "vouch_nimbus", 
-  "vouch_prysm",
-  "vouch_lodestar",
-  "vouch_vouch"
+  "lodestar_vouch"
 )
 
 # lighthouse beacon client with validator client x
@@ -50,7 +55,7 @@ lighthouse_lighthouse <- TRUE
 lighthouse_teku <- TRUE
 lighthouse_nimbus <- TRUE
 lighthouse_prysm <- FALSE
-lighthouse_lodestar <- TRUE
+lighthouse_lodestar <- WARNING
 lighthouse_vouch <- TRUE
 
 # teku beacon client with validator client x
@@ -58,16 +63,16 @@ teku_lighthouse <- TRUE
 teku_teku <- TRUE
 teku_nimbus <- TRUE
 teku_prysm <- FALSE
-teku_lodestar <- TRUE
+teku_lodestar <- WARNING
 teku_vouch <- TRUE
 
 # nimbus beacon client with validator client x
-nimbus_lighthouse <- TRUE
-nimbus_teku <- TRUE
+nimbus_lighthouse <- WARNING
+nimbus_teku <- WARNING
 nimbus_nimbus <- TRUE
 nimbus_prysm <- FALSE
 nimbus_lodestar <- FALSE
-nimbus_vouch <- TRUE 
+nimbus_vouch <- FALSE
 
 # prysm beacon client with validator client x
 prysm_lighthouse <- NA
@@ -80,16 +85,7 @@ prysm_vouch <- TRUE
 # lodestar beacon client with validator client x
 lodestar_lighthouse <- TRUE
 lodestar_teku <- FALSE
-lodestar_nimbus <- TRUE
+lodestar_nimbus <- WARNING
 lodestar_prysm <- FALSE
 lodestar_lodestar <- TRUE
 lodestar_vouch <- NA
-
-# vouch beacon client with validator client x
-# vouch is validator client but needs to be added as bn for the sake of the matrix plot
-vouch_lighthouse <- FALSE
-vouch_teku <- FALSE
-vouch_nimbus <- FALSE
-vouch_prysm <- FALSE
-vouch_lodestar <- FALSE
-vouch_vouch <- FALSE
