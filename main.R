@@ -1,6 +1,6 @@
 print("Install and load dependencies...")
 
-packages <- c("tidyr", "tibble", "ggplot2", "rstudioapi")
+packages <- c("tidyr", "tibble", "ggplot2", "rstudioapi", "lintr")
 
 lapply(
   packages,
@@ -24,4 +24,3 @@ if (class(try_result) == "try-error") {
   source("./scripts/create_data_source_for_plot.R")
   source("./scripts/create_plot.R")
 }
-
