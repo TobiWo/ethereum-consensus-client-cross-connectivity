@@ -6,11 +6,11 @@
 
 # CL clients in format <client name>_<release or tag>
 clients <- c(
-  "lighthouse_v2.5.1",
-  "teku_v22.8.0",
+  "lighthouse_v3.0.0",
+  "teku_v22.8.1",
   "nimbus_v22.7.0",
-  "prysm_v2.1.4-rc.0",
-  "lodestar_v0.41.0",
+  "prysm_v3.0.0",
+  "lodestar_v1.0.0",
   "vouch_v1.5.0"
 )
 
@@ -55,7 +55,7 @@ lighthouse_lighthouse <- TRUE
 lighthouse_teku <- TRUE
 lighthouse_nimbus <- TRUE
 lighthouse_prysm <- FALSE
-lighthouse_lodestar <- WARNING
+lighthouse_lodestar <- TRUE
 lighthouse_vouch <- TRUE
 
 # teku beacon client with validator client x
@@ -63,16 +63,16 @@ teku_lighthouse <- TRUE
 teku_teku <- TRUE
 teku_nimbus <- TRUE
 teku_prysm <- FALSE
-teku_lodestar <- WARNING
+teku_lodestar <- TRUE
 teku_vouch <- TRUE
 
 # nimbus beacon client with validator client x
-nimbus_lighthouse <- WARNING
-nimbus_teku <- WARNING
+nimbus_lighthouse <- TRUE
+nimbus_teku <- TRUE
 nimbus_nimbus <- TRUE
 nimbus_prysm <- FALSE
 nimbus_lodestar <- FALSE
-nimbus_vouch <- FALSE
+nimbus_vouch <- TRUE
 
 # prysm beacon client with validator client x
 prysm_lighthouse <- NA
@@ -85,7 +85,7 @@ prysm_vouch <- TRUE
 # lodestar beacon client with validator client x
 lodestar_lighthouse <- TRUE
 lodestar_teku <- FALSE
-lodestar_nimbus <- WARNING
+lodestar_nimbus <- FALSE
 lodestar_prysm <- FALSE
 lodestar_lodestar <- TRUE
 lodestar_vouch <- NA
