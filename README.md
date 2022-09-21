@@ -26,6 +26,10 @@ Repository related topics are mostly discussed in the [client diversity channel 
 
 ### Notes
 
+#### Lodestar
+
+The issue referenced in the issues table was already addressed by the lodestar team and will be fixed in the next release. I tested it successfully with a development version. However, I found that there is another issue with lodestar and nimbus which the lodestar team is working on. I don't know if it will be fixed in the next release but I will test it for sure.
+
 #### Prysm
 
 I didn't test prysm yet. This data will be added soon (hopefully).
