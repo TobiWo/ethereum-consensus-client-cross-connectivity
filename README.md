@@ -20,9 +20,9 @@ Repository related topics are mostly discussed in the [client diversity channel 
 
 | bn | vc | issue |
 | --- | --- | --- |
-| nimbus | lodestar | <https://github.com/ChainSafe/lodestar/issues/4403> |
 | lodestar | nimbus | `NOT REPORTED YET` |
 | lodestar | teku | `NOT REPORTED YET` |
+| teku | lodestar | `NOT REPORTED YET` |
 
 ### Notes
 
